@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography Project</title>
+    <style>
+        .footer{
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            padding: 15px;
+        }
+
+        .image-container{
+            position: relative;
+            width: 50%;
+            float: left;
+            text-align: center;
+            padding-top: 25px;
+            border: 50;
+            
+        }
+
+        .card{                
+            margin: 25px;
+            margin-left: 5vw;
+            margin-right: 26vw;
+            
+        }
+      
+        .btnnn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .carousel{
+            padding-left: 3vw;
+            padding-right: 3vw;
+            
+        }
+
+    </style>
+</head>
+<body>
+    {% include 'navigation.html' %}
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="..\static\Stegano_img1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..\static\Stegano_img2.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..\static\Stegano_img4.webp" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      
+      <div class="card float-start" style="width: 25rem;">
+        <img src="..\static\encrypt2.jpg" height="200" width="400" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Encryption</h5>
+          <p class="card-text">Hide your text inside the image.</p>
+          <a href="encryption/" class="btn btn-danger">Encrypt Now</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 25rem;">
+        <img src="..\static\decryp_image.webp" height="200" width="400" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Decryption</h5>
+          <p class="card-text">Extract text from the image.</p>
+          <a href="decryption/" class="btn btn-primary">Decrypt Now</a>
+        </div>
+      </div>
+    
+</body>
+</html>
